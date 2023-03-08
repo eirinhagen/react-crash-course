@@ -2,7 +2,7 @@ import Button from "./Button.js"
 
 const Header = ({title}) => {
     const onClick = () => {
-        console.log('myaw')
+        console.log('click')
     }
   return (
     <div className="container">
