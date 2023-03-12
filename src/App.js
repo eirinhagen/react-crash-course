@@ -3,8 +3,7 @@
  import Tasks from "./components/Tasks";
 function App() {
    
-  const name = "Eirin"
- const [a,setTasks] = useState([
+ const [tasks,setTasks] = useState([
   {id : 1,
    text : "Coocking salmon",
    reminder : true,
@@ -18,13 +17,13 @@ function App() {
 ])
 
 const deleteTask = (id) => {
-  console.log('delete',id)
+setTasks(tasks.filter((task) => task.id !== id))
 }
 
   return (
     <div className='container'>
       <Header />
-      <Tasks tasks={a} onDelete = {deleteTask}/>
+      <Tasks tasks={tasks} onDelete = {deleteTask}/>
    </div>
   );
 }
